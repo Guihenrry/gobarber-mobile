@@ -15,7 +15,6 @@ export default function Dashboard() {
       const response = await api.get('appointments');
 
       setAppointments(response.data);
-      console.tron.log(response.data);
     }
 
     loadAppointments();
