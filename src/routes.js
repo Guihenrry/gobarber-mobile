@@ -13,6 +13,7 @@ import SignIn from '~/pages/SignIn';
 import SignUp from '~/pages/SignUp';
 import Dashboard from '~/pages/Dashboard';
 import Profile from '~/pages/Profile';
+import New from '~/pages/New';
 
 const Tab = createBottomTabNavigator();
 const stack = createStackNavigator();
@@ -38,6 +39,18 @@ function SignedRoutes() {
           // eslint-disable-next-line react/prop-types
           tabBarIcon: ({ color }) => (
             <Icon name="event" color={color} size={20} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="New"
+        component={New}
+        options={{
+          title: 'Agendar',
+          tabBarVisible: false,
+          // eslint-disable-next-line react/prop-types
+          tabBarIcon: ({ color }) => (
+            <Icon name="add-circle-outline" color={color} size={20} />
           ),
         }}
       />
